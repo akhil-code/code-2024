@@ -5,7 +5,7 @@ public class Factorial {
         System.out.println(factorial(5));
     }
 
-    private static int factorial(int n) {
+    private static long factorial(long n) {
         if(n == 0) {
             return 1;
         }
