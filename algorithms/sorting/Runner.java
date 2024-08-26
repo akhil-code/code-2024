@@ -1,10 +1,12 @@
 package algorithms.sorting;
 
+import algorithms.sorting.comparision.QuickSort;
+
 import java.util.Arrays;
 
 public class Runner {
     public static void main(String[] args) {
-        int[] inputArray = {5, 4, 3, 2, 1};
-        System.out.println(Arrays.toString(new BubbleSort().sort(inputArray)));
+        int[] inputArray = {23, 1, 10, 5, 2};
+        System.out.println(Arrays.toString(new QuickSort().sort(inputArray)));
     }
 }

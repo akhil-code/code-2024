@@ -1,5 +1,6 @@
-package algorithms.sorting;
+package algorithms.sorting.comparision;
 
+import algorithms.sorting.Sorter;
 import algorithms.utils.Util;
 
 import java.util.Arrays;
