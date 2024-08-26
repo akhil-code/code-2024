@@ -15,7 +15,7 @@ public class FindNthNode {
         System.out.println("Nth node from end: " + nthNodeFromEnd.data);
     }
 
-    private static Node findNthNode(Node head, int n) {
+    public static Node findNthNode(Node head, int n) {
         Node currNode = head;
         for(int i=0;i<n-1;i++) {
             currNode = currNode.nextNode;
@@ -23,7 +23,7 @@ public class FindNthNode {
         return currNode;
     }
 
-    private static Node findNthNodeFromEnd(Node head, int n) {
+    public static Node findNthNodeFromEnd(Node head, int n) {
         Node targetNode = head;
         Node currentNode = head;
         for (int i = 0; i < n; i++) {
