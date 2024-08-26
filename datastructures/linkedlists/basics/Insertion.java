@@ -1,7 +1,7 @@
 package datastructures.linkedlists.basics;
 
 import datastructures.linkedlists.model.Node;
-import datastructures.linkedlists.model.LinkedListUtil;
+import datastructures.linkedlists.util.LinkedListUtil;
 
 public class Insertion {
 

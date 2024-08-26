@@ -1,35 +1,17 @@
 package datastructures.linkedlists.basics;
 
 import datastructures.linkedlists.model.Node;
-import datastructures.linkedlists.model.LinkedListUtil;
+import datastructures.linkedlists.util.LinkedListUtil;
 
 public class InsertionDoubleLinkedList {
     public static void main(String[] args) {
         System.out.println("Creating double linked list");
-        Node doubleLinkedList = createDummyDoubleLinkedList();
+        Node doubleLinkedList = LinkedListUtil.createDummyDoubleLinkedList();
         addAtPositionInDoubleLinkedList(doubleLinkedList, 2, 999);
         LinkedListUtil.printLinkedList(doubleLinkedList);
         addAtPositionInDoubleLinkedList(doubleLinkedList, 0, -1);
         LinkedListUtil.printLinkedList(doubleLinkedList);
     }
-
-    private static Node createDummyDoubleLinkedList() {
-        Node linkedList = new Node(0);
-        Node node1 = new Node(1);
-        linkedList.nextNode = node1;
-        node1.prevNode = linkedList;
-
-        Node node2 = new Node(2);
-        node1.nextNode = node2;
-        node2.prevNode = node1;
-
-        Node node3 = new Node(3);
-        node2.nextNode = node3;
-        node3.prevNode = node2;
-
-        return linkedList;
-    }
-
 
     /**
      * Double linked list
