@@ -1,8 +1,8 @@
 package datastructures.linkedlists.model;
 
 public class Node {
-    int data;
-    Node nextNode;
+    public int data;
+    public Node nextNode;
 
     public Node(int data, Node nextNode) {
         this.data = data;
