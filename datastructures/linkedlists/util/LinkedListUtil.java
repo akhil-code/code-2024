@@ -2,6 +2,8 @@ package datastructures.linkedlists.util;
 
 import datastructures.linkedlists.model.Node;
 
+import java.util.List;
+
 public class LinkedListUtil {
 
     public static void printLinkedList(Node head) {
@@ -39,5 +41,27 @@ public class LinkedListUtil {
         node3.prevNode = node2;
 
         return linkedList;
+    }
+
+    public static Node createLinkedListFromArray(List<Integer> arr) {
+        Node head = new Node(arr.get(0));
+        for (int i = 1; i < arr.size(); i++) {
+            insertAtEnd(head, arr.get(i));
+        }
+        return head;
+    }
+
+    private static Node insertAtEnd(Node head, int data) {
+
+        if(head == null) {
+            return new Node(data);
+        }
+
+        Node currNode = head;
+        while(currNode.nextNode != null) {
+            currNode = currNode.nextNode;
+        }
+        currNode.nextNode = new Node(data);
+        return head;
     }
 }

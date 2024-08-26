@@ -12,7 +12,7 @@ public class ReverseLinkedList {
         LinkedListUtil.printLinkedList(reversedLinkedList);
     }
 
-    private static Node reverseLinkedList(Node head) {
+    public static Node reverseLinkedList(Node head) {
         Node prev = null, curr = head, next = curr.nextNode;
 
         while(curr != null) {

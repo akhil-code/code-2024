@@ -11,7 +11,7 @@ public class FindMiddleElement {
         System.out.println("middle node: " + middleNode.data);
     }
 
-    private static Node findMiddleNode(Node head) {
+    public static Node findMiddleNode(Node head) {
         Node slowPointer = head;
         Node fastPointer = head;
         while(fastPointer != null && fastPointer.nextNode != null) {
