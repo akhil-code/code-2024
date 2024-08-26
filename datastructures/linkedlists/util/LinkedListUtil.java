@@ -20,6 +20,7 @@ public class LinkedListUtil {
         linkedList1.nextNode.nextNode.nextNode.nextNode = new Node(4);
         linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(5);
         linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(6);
+        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(7);
         return linkedList1;
     }
 
