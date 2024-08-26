@@ -19,12 +19,6 @@ public class FindMiddleElement {
             fastPointer = fastPointer.nextNode.nextNode;
         }
 
-        if(fastPointer == null) {
-            System.out.println("middle element 1: " + slowPointer.data);
-            System.out.println("middle element 2: " + slowPointer.nextNode.data);
-        } else {
-            System.out.println(slowPointer.data);
-        }
         return slowPointer;
     }
 }
