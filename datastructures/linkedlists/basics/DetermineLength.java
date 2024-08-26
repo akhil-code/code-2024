@@ -16,7 +16,7 @@ public class DetermineLength {
         System.out.println(String.format("Length of linked list recursive is : %d", sizeRecursive));
     }
 
-    private static int findSize(Node head) {
+    public static int findSize(Node head) {
         int size = 0;
         Node currNode = head;
         while(currNode != null) {
