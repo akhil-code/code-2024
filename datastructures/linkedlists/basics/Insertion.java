@@ -1,29 +1,17 @@
 package datastructures.linkedlists.basics;
 
 import datastructures.linkedlists.model.Node;
-import datastructures.linkedlists.model.Util;
+import datastructures.linkedlists.model.LinkedListUtil;
 
 public class Insertion {
 
     public static void main(String[] args) {
-        Node linkedList1 = createDummyLinkedList();
+        Node linkedList1 = LinkedListUtil.createDummyLinkedList();
         linkedList1 = insertAtStart(linkedList1, -1);
         linkedList1 = insertAtEnd(linkedList1, 25);
         linkedList1 = insertAtIndex(linkedList1, 2, 999);
-        Util.printLinkedList(linkedList1);
+        LinkedListUtil.printLinkedList(linkedList1);
     }
-
-    private static Node createDummyLinkedList() {
-        Node linkedList1 = new Node(0);
-        linkedList1.nextNode = new Node(1);
-        linkedList1.nextNode.nextNode = new Node(2);
-        linkedList1.nextNode.nextNode.nextNode = new Node(3);
-        linkedList1.nextNode.nextNode.nextNode.nextNode = new Node(4);
-        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(5);
-        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(6);
-        return linkedList1;
-    }
-
 
     public static Node insertAtStart(Node head, int data) {
         Node newNode = new Node(data);
