@@ -1,17 +1,17 @@
 package datastructures.linkedlists.model;
 
-public class Node {
+public class LinkedListNode {
     public int data;
-    public Node nextNode;
-    public Node prevNode;
+    public LinkedListNode nextNode;
+    public LinkedListNode prevNode;
 
-    public Node(int data, Node nextNode) {
+    public LinkedListNode(int data, LinkedListNode nextNode) {
         this.data = data;
         this.nextNode = nextNode;
         this.prevNode = null;
     }
 
-    public Node(int data) {
+    public LinkedListNode(int data) {
         this.data = data;
         this.nextNode = null;
         this.prevNode = null;

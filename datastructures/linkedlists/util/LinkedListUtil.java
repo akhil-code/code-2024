@@ -1,12 +1,12 @@
 package datastructures.linkedlists.util;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 
 import java.util.List;
 
 public class LinkedListUtil {
 
-    public static void printLinkedList(Node head) {
+    public static void printLinkedList(LinkedListNode head) {
         while(head != null) {
             System.out.print(head.data + " -> ");
             head = head.nextNode;
@@ -14,54 +14,54 @@ public class LinkedListUtil {
         System.out.println("null");
     }
 
-    public static Node createDummyLinkedList() {
-        Node linkedList1 = new Node(0);
-        linkedList1.nextNode = new Node(1);
-        linkedList1.nextNode.nextNode = new Node(2);
-        linkedList1.nextNode.nextNode.nextNode = new Node(3);
-        linkedList1.nextNode.nextNode.nextNode.nextNode = new Node(4);
-        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(5);
-        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(6);
-        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new Node(7);
+    public static LinkedListNode createDummyLinkedList() {
+        LinkedListNode linkedList1 = new LinkedListNode(0);
+        linkedList1.nextNode = new LinkedListNode(1);
+        linkedList1.nextNode.nextNode = new LinkedListNode(2);
+        linkedList1.nextNode.nextNode.nextNode = new LinkedListNode(3);
+        linkedList1.nextNode.nextNode.nextNode.nextNode = new LinkedListNode(4);
+        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode = new LinkedListNode(5);
+        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new LinkedListNode(6);
+        linkedList1.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode.nextNode = new LinkedListNode(7);
         return linkedList1;
     }
 
-    public static Node createDummyDoubleLinkedList() {
-        Node linkedList = new Node(0);
-        Node node1 = new Node(1);
+    public static LinkedListNode createDummyDoubleLinkedList() {
+        LinkedListNode linkedList = new LinkedListNode(0);
+        LinkedListNode node1 = new LinkedListNode(1);
         linkedList.nextNode = node1;
         node1.prevNode = linkedList;
 
-        Node node2 = new Node(2);
+        LinkedListNode node2 = new LinkedListNode(2);
         node1.nextNode = node2;
         node2.prevNode = node1;
 
-        Node node3 = new Node(3);
+        LinkedListNode node3 = new LinkedListNode(3);
         node2.nextNode = node3;
         node3.prevNode = node2;
 
         return linkedList;
     }
 
-    public static Node createLinkedListFromArray(List<Integer> arr) {
-        Node head = new Node(arr.get(0));
+    public static LinkedListNode createLinkedListFromArray(List<Integer> arr) {
+        LinkedListNode head = new LinkedListNode(arr.get(0));
         for (int i = 1; i < arr.size(); i++) {
             insertAtEnd(head, arr.get(i));
         }
         return head;
     }
 
-    private static Node insertAtEnd(Node head, int data) {
+    private static LinkedListNode insertAtEnd(LinkedListNode head, int data) {
 
         if(head == null) {
-            return new Node(data);
+            return new LinkedListNode(data);
         }
 
-        Node currNode = head;
+        LinkedListNode currNode = head;
         while(currNode.nextNode != null) {
             currNode = currNode.nextNode;
         }
-        currNode.nextNode = new Node(data);
+        currNode.nextNode = new LinkedListNode(data);
         return head;
     }
 }

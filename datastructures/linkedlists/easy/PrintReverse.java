@@ -1,18 +1,18 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class PrintReverse {
     public static void main(String[] args) {
-        Node head = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode head = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(head);
 
         printReverse(head);
     }
 
 
-    public static void printReverse(Node head) {
+    public static void printReverse(LinkedListNode head) {
         if(head == null) {
             return;
         }

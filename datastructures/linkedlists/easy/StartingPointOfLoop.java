@@ -1,19 +1,19 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class StartingPointOfLoop {
     public static void main(String[] args) {
-        Node list = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode list = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(list);
 
-        Node nthNode = FindNthNode.findNthNode(list, 3);
+        LinkedListNode nthNode = FindNthNode.findNthNode(list, 3);
         System.out.println("setting the loop start node as : " + nthNode.data);
-        Node lastNode = FindNthNode.findNthNodeFromEnd(list, 1);
+        LinkedListNode lastNode = FindNthNode.findNthNodeFromEnd(list, 1);
         lastNode.nextNode = nthNode;
 
-        Node findStartingPoint = findStartingPointOfLoop(list);
+        LinkedListNode findStartingPoint = findStartingPointOfLoop(list);
         System.out.println("starting node of loop identified: " + findStartingPoint.data);
 
         int loopSize = findLengthOfLoop(list);
@@ -23,9 +23,9 @@ public class StartingPointOfLoop {
         System.out.printf("Linked list size: " + linkedListSize);
     }
 
-    public static int findLengthOfLoop(Node head) {
-        Node slowPointer = head;
-        Node fastPointer = head;
+    public static int findLengthOfLoop(LinkedListNode head) {
+        LinkedListNode slowPointer = head;
+        LinkedListNode fastPointer = head;
 
         while(fastPointer != null && fastPointer.nextNode != null) {
             slowPointer = slowPointer.nextNode;
@@ -44,9 +44,9 @@ public class StartingPointOfLoop {
         return count;
     }
 
-    public static Node findStartingPointOfLoop(Node head) {
-        Node slowPointer = head;
-        Node fastPointer = head;
+    public static LinkedListNode findStartingPointOfLoop(LinkedListNode head) {
+        LinkedListNode slowPointer = head;
+        LinkedListNode fastPointer = head;
 
         while(fastPointer != null && fastPointer.nextNode != null) {
             slowPointer = slowPointer.nextNode;
@@ -56,7 +56,7 @@ public class StartingPointOfLoop {
             }
         }
 
-        Node curNode = null;
+        LinkedListNode curNode = null;
         if(slowPointer == fastPointer) {
             curNode = head;
         }
@@ -67,8 +67,8 @@ public class StartingPointOfLoop {
         return curNode;
     }
 
-    public static int findNumberOfNodesInLoopedLinkedList(Node head) {
-        Node loopStartPoint = findStartingPointOfLoop(head);
+    public static int findNumberOfNodesInLoopedLinkedList(LinkedListNode head) {
+        LinkedListNode loopStartPoint = findStartingPointOfLoop(head);
         int lengthOfLoop = findLengthOfLoop(head) - 1;
 
         int count = 1;
@@ -76,7 +76,6 @@ public class StartingPointOfLoop {
             count++;
             head = head.nextNode;
         }
-
         return count + lengthOfLoop;
     }
 }

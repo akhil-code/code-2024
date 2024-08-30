@@ -1,28 +1,28 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 import java.util.Arrays;
 
-public class CheckIfPallindrome {
+public class CheckIfPalindrome {
     public static void main(String[] args) {
-        Node linkedList = LinkedListUtil
+        LinkedListNode linkedList = LinkedListUtil
                 .createLinkedListFromArray(Arrays.asList(1, 2, 3, 4, 5, 5, 6, 4, 3, 2, 1));
 
         System.out.println(checkForPalindrome(linkedList));
 
     }
 
-    public static boolean checkForPalindrome(Node linkedList) {
-        Node middleNode = FindMiddleElement.findMiddleNode(linkedList);
-        Node firstHalf = linkedList;
-        Node secondHalf = middleNode.nextNode;
+    public static boolean checkForPalindrome(LinkedListNode linkedList) {
+        LinkedListNode middleNode = FindMiddleElement.findMiddleNode(linkedList);
+        LinkedListNode firstHalf = linkedList;
+        LinkedListNode secondHalf = middleNode.nextNode;
         secondHalf = ReverseLinkedList.reverseLinkedList(secondHalf);
         middleNode.nextNode = null;
 
-        Node curr1 = firstHalf;
-        Node curr2 = secondHalf;
+        LinkedListNode curr1 = firstHalf;
+        LinkedListNode curr2 = secondHalf;
 
         boolean isPalindrome = true;
         while(curr1 != null && curr2 != null) {

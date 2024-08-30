@@ -1,22 +1,22 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class DetectLoop {
 
     public static void main(String[] args) {
-        Node linkedList = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode linkedList = LinkedListUtil.createDummyLinkedList();
         System.out.println("loop exists: " + detectLoop(linkedList));
-        Node tailNode = FindNthNode.findNthNodeFromEnd(linkedList, 1);
-        Node midNode = FindNthNode.findNthNode(linkedList, 3);
+        LinkedListNode tailNode = FindNthNode.findNthNodeFromEnd(linkedList, 1);
+        LinkedListNode midNode = FindNthNode.findNthNode(linkedList, 3);
         tailNode.nextNode = midNode;
         System.out.println("loop exists: " + detectLoop(linkedList));
     }
-    public static boolean detectLoop(Node head) {
+    public static boolean detectLoop(LinkedListNode head) {
         boolean loopExists = false;
-        Node slowPointer = head;
-        Node fastPointer = head;
+        LinkedListNode slowPointer = head;
+        LinkedListNode fastPointer = head;
         while(fastPointer != null && fastPointer.nextNode != null) {
             slowPointer = slowPointer.nextNode;
             fastPointer = fastPointer.nextNode.nextNode;

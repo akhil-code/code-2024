@@ -1,12 +1,12 @@
 package datastructures.linkedlists.basics;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class Deletion {
 
     public static void main(String[] args) {
-        Node linkedList = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode linkedList = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(linkedList);
         linkedList = deleteKey(linkedList, 3);
         LinkedListUtil.printLinkedList(linkedList);
@@ -16,16 +16,16 @@ public class Deletion {
         LinkedListUtil.printLinkedList(linkedList);
     }
 
-    private static Node deleteKey(Node head, int key) {
+    private static LinkedListNode deleteKey(LinkedListNode head, int key) {
 
         if(key == head.data) {
-            Node newHead = head.nextNode;
+            LinkedListNode newHead = head.nextNode;
             head.nextNode = null;
             return newHead;
         }
 
-        Node prevNode = null;
-        Node currNode = head;
+        LinkedListNode prevNode = null;
+        LinkedListNode currNode = head;
         while(currNode.data != key) {
             prevNode = currNode;
             currNode = currNode.nextNode;

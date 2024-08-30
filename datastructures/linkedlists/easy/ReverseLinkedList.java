@@ -1,19 +1,19 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
-        Node linkedList = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode linkedList = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(linkedList);
 
-        Node reversedLinkedList = reverseLinkedList(linkedList);
+        LinkedListNode reversedLinkedList = reverseLinkedList(linkedList);
         LinkedListUtil.printLinkedList(reversedLinkedList);
     }
 
-    public static Node reverseLinkedList(Node head) {
-        Node prev = null, curr = head, next = curr.nextNode;
+    public static LinkedListNode reverseLinkedList(LinkedListNode head) {
+        LinkedListNode prev = null, curr = head, next = curr.nextNode;
 
         while(curr != null) {
             next = curr.nextNode;

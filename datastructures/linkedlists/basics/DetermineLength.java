@@ -1,12 +1,12 @@
 package datastructures.linkedlists.basics;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class DetermineLength {
 
     public static void main(String[] args) {
-        Node linkedList = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode linkedList = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(linkedList);
 
         int size = findSize(linkedList);
@@ -16,9 +16,9 @@ public class DetermineLength {
         System.out.println(String.format("Length of linked list recursive is : %d", sizeRecursive));
     }
 
-    public static int findSize(Node head) {
+    public static int findSize(LinkedListNode head) {
         int size = 0;
-        Node currNode = head;
+        LinkedListNode currNode = head;
         while(currNode != null) {
             currNode = currNode.nextNode;
             size++;
@@ -26,7 +26,7 @@ public class DetermineLength {
         return size;
     }
 
-    private static int findSizeRecursive(Node head) {
+    private static int findSizeRecursive(LinkedListNode head) {
         if(head != null) {
             return 1 + findSizeRecursive(head.nextNode);
         }

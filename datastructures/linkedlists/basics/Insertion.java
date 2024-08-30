@@ -1,51 +1,51 @@
 package datastructures.linkedlists.basics;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class Insertion {
 
     public static void main(String[] args) {
-        Node linkedList1 = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode linkedList1 = LinkedListUtil.createDummyLinkedList();
         linkedList1 = insertAtStart(linkedList1, -1);
         linkedList1 = insertAtEnd(linkedList1, 25);
         linkedList1 = insertAtIndex(linkedList1, 2, 999);
         LinkedListUtil.printLinkedList(linkedList1);
     }
 
-    public static Node insertAtStart(Node head, int data) {
-        Node newNode = new Node(data);
+    public static LinkedListNode insertAtStart(LinkedListNode head, int data) {
+        LinkedListNode newNode = new LinkedListNode(data);
         newNode.nextNode = head;
         return newNode;
     }
 
-    public static Node insertAtEnd(Node head, int data) {
+    public static LinkedListNode insertAtEnd(LinkedListNode head, int data) {
 
         if(head == null) {
-            return new Node(data);
+            return new LinkedListNode(data);
         }
 
-        Node currNode = head;
+        LinkedListNode currNode = head;
         while(currNode.nextNode != null) {
             currNode = currNode.nextNode;
         }
-        currNode.nextNode = new Node(data);
+        currNode.nextNode = new LinkedListNode(data);
         return head;
     }
 
-    public static Node insertAtIndex(Node head, int index, int data) {
+    public static LinkedListNode insertAtIndex(LinkedListNode head, int index, int data) {
         if (index == 0) {
-            return new Node(data);
+            return new LinkedListNode(data);
         }
 
         int i = 0;
-        Node currNode = head;
+        LinkedListNode currNode = head;
         while(i < index-1 && currNode != null) {
             currNode = currNode.nextNode;
             i++;
         }
 
-        Node newNode = new Node(data);
+        LinkedListNode newNode = new LinkedListNode(data);
         newNode.nextNode = currNode.nextNode;
         currNode.nextNode = newNode;
         return head;

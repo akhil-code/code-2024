@@ -1,31 +1,31 @@
 package datastructures.linkedlists.easy;
 
-import datastructures.linkedlists.model.Node;
+import datastructures.linkedlists.model.LinkedListNode;
 import datastructures.linkedlists.util.LinkedListUtil;
 
 public class AlternateSplitOfLinkedList {
     public static void main(String[] args) {
-        Node list = LinkedListUtil.createDummyLinkedList();
+        LinkedListNode list = LinkedListUtil.createDummyLinkedList();
         LinkedListUtil.printLinkedList(list);
 
-        Node splitList = alternateSplit(list);
+        LinkedListNode splitList = alternateSplit(list);
 
         LinkedListUtil.printLinkedList(list);
         LinkedListUtil.printLinkedList(splitList);
     }
 
 
-    public static Node alternateSplit(Node head) {
+    public static LinkedListNode alternateSplit(LinkedListNode head) {
         if(head == null) {
             return null;
         }
-        Node splitList = head.nextNode;
+        LinkedListNode splitList = head.nextNode;
 
-        Node curr = head;
-        Node prev = null;
+        LinkedListNode curr = head;
+        LinkedListNode prev = null;
 
         while(curr != null && curr.nextNode != null) {
-            Node nextNode = curr.nextNode;
+            LinkedListNode nextNode = curr.nextNode;
             curr.nextNode = nextNode.nextNode;
             if(prev != null) {
                 prev.nextNode = nextNode;
