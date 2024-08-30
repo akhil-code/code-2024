@@ -25,7 +25,6 @@ public class InorderTraversal {
     public static void inorderIterative(BinaryTreeNode node) {
         BinaryTreeNode currNode = node;
         Stack<BinaryTreeNode> stack = new Stack<>();
-
         while(currNode != null || !stack.isEmpty()) {
             while(currNode != null) {
                 stack.add(currNode);

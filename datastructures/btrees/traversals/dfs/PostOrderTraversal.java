@@ -10,7 +10,6 @@ public class PostOrderTraversal {
         BinaryTreeNode tree = BTreeUtil.createDummyTree();
         postOrderTraversal(tree);
         System.out.println("\nPost order traversal using iteration");
-
         postOrderIterative(tree);
     }
 
@@ -27,9 +26,10 @@ public class PostOrderTraversal {
         Stack<BinaryTreeNode> stack1 = new Stack<>();
         Stack<BinaryTreeNode> stack2 = new Stack<>();
 
-        stack1.add(tree);
+        BinaryTreeNode currNode = tree;
+        stack1.add(currNode);
         while(!stack1.isEmpty()) {
-            BinaryTreeNode currNode = stack1.pop();
+            currNode = stack1.pop();
             stack2.add(currNode);
             if(currNode.left != null) {
                 stack1.add(currNode.left);
@@ -40,7 +40,7 @@ public class PostOrderTraversal {
         }
 
         while(!stack2.isEmpty()) {
-            BinaryTreeNode currNode = stack2.pop();
+            currNode = stack2.pop();
             System.out.print(currNode.data + " -> ");
         }
     }
