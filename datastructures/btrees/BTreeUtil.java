@@ -25,5 +25,9 @@ public class BTreeUtil {
         return rootNode;
     }
 
+    public static boolean isLeafNode(BinaryTreeNode node) {
+        return node.left == null && node.right == null;
+    }
+
 
 }
