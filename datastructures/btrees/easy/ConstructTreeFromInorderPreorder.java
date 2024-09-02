@@ -1,8 +1,6 @@
 package datastructures.btrees.easy;
 
-import datastructures.btrees.BTreeUtil;
 import datastructures.btrees.model.BinaryTreeNode;
-import datastructures.btrees.traversals.bfs.LevelOrderTraversal;
 import datastructures.btrees.traversals.dfs.InorderTraversal;
 
 import java.util.Arrays;
