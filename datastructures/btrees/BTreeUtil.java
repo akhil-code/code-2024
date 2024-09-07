@@ -29,5 +29,9 @@ public class BTreeUtil {
         return node.left == null && node.right == null;
     }
 
+    public static boolean hasTwoChildren(BinaryTreeNode node) {
+        return node.left != null && node.right != null;
+    }
+
 
 }
