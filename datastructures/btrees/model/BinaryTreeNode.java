@@ -17,6 +17,17 @@ public class BinaryTreeNode {
 
     @Override
     public String toString() {
-        return String.valueOf(this.data);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Node{");
+        stringBuilder.append("d=" + data );
+        if(left != null) {
+            stringBuilder.append(", l=" + left);
+        }
+        if(right != null) {
+            stringBuilder.append(", r=" + right);
+        }
+        stringBuilder.append("}");
+
+        return stringBuilder.toString();
     }
 }

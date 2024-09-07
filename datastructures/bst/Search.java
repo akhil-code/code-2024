@@ -35,6 +35,5 @@ public class Search {
         } else {
             return search(node.right, data);
         }
-
     }
 }
