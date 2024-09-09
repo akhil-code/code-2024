@@ -38,8 +38,7 @@ public class HeapUtil {
         }
     }
 
-    public static void maxHeapify(int[] arr, int i) {
-        int n = arr.length;
+    public static void maxHeapify(int[] arr, int n, int i) {
         int left = HeapUtil.left(i);
         int right = HeapUtil.right(i);
 
@@ -54,7 +53,7 @@ public class HeapUtil {
 
         if(largest != i) {
             HeapUtil.swap(arr, i, largest);
-            maxHeapify(arr, largest);
+            maxHeapify(arr, n, largest);
         }
     }
 }

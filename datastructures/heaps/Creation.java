@@ -20,7 +20,7 @@ public class Creation {
     public static int[] createMaxHeapFromArray(int[] arr) {
         int n = arr.length;
         for(int i = n /2 ; i >= 0; i--) {
-            HeapUtil.maxHeapify(arr, i);
+            HeapUtil.maxHeapify(arr, arr.length, i);
         }
         return arr;
     }

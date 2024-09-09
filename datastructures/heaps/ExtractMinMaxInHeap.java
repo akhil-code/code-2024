@@ -20,7 +20,7 @@ public class ExtractMinMaxInHeap {
         heap[0] = heap[n - 1];
         int[] newHeap = Arrays.copyOf(heap, n-1);
 
-        HeapUtil.maxHeapify(newHeap, 0);
+        HeapUtil.maxHeapify(newHeap, newHeap.length, 0);
 
         return newHeap;
     }
