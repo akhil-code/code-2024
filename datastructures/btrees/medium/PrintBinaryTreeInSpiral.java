@@ -31,7 +31,7 @@ public class PrintBinaryTreeInSpiral {
             BinaryTreeNode currNode = queue.poll();
 
             if (leftToRight) {
-                System.out.print(currNode + " -> ");
+                System.out.print(currNode.data + " -> ");
             } else {
                 stack.add(currNode.data);
             }
