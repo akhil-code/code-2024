@@ -3,8 +3,8 @@ package algorithms.dynamicprogramming;
 public class SubsetSum {
     public static void main(String[] args) {
         int[] arr = {3, 34, 4, 12, 5, 2};
-        int sum = 900;
-        if (isSubsetSum(arr, sum))
+        int sum = 9;
+        if (subsetSumOptimized(arr, sum))
             System.out.println("Found a subset with given sum");
         else
             System.out.println("No subset with given sum");
@@ -32,5 +32,27 @@ public class SubsetSum {
         }
 
         return dp[m][sum];
+    }
+
+    public static boolean subsetSumOptimized(int[] arr, int sum) {
+        int m = arr.length;
+        boolean[] prev = new boolean[sum+1];
+        boolean[] curr = new boolean[sum+1];
+        prev[0] = curr[0] = true;
+
+        for (int i = 1; i <= sum; i++) {
+            prev[i] = false;
+        }
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 1; j <= sum; j++) {
+                curr[j] = prev[j];
+                if(j-arr[i] >= 0) {
+                    curr[j] = curr[j] || prev[j-arr[i]];
+                }
+            }
+            prev = curr.clone();
+        }
+        return curr[sum];
     }
 }
