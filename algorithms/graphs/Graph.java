@@ -40,7 +40,7 @@ public class Graph {
         for (int i = 0; i < size; i++) {
             List<GraphNode> adjNodes = nodes.get(i);
             for(GraphNode adjNode : adjNodes) {
-                edges.add(new GraphEdge(i, adjNode.nodeId, adjNode.dist));
+                edges.add(new GraphEdge(i, adjNode.nodeId, adjNode.weight));
             }
         }
         return edges;

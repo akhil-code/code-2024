@@ -2,15 +2,15 @@ package algorithms.graphs;
 
 public class GraphNode {
     int nodeId;
-    int dist;
+    int weight;
 
-    public GraphNode(int nodeId, int dist) {
+    public GraphNode(int nodeId, int weight) {
         this.nodeId = nodeId;
-        this.dist = dist;
+        this.weight = weight;
     }
 
     public GraphNode(int nodeId) {
         this.nodeId = nodeId;
-        this.dist = 1;
+        this.weight = 1;
     }
 }
