@@ -1,49 +1,22 @@
 package algorithms.graphs;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Representation {
     public static void main(String[] args) {
-        // matrix representation
-        int[][] matrixRepresentation = {
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-                {0, 0, 0, 0},
-        };
+        Graph g = new Graph(5);
+        g.addEdge(0, 1);
+        g.addEdge(1, 2);
+        g.addEdge(2, 3);
+        g.addEdge(1, 4);
 
-        // adjacency list
-        int n = 5;
-        List<List<Integer>> adj = new ArrayList<>(n);
-        for (int i = 0; i < n; i++) {
-            adj.add(new ArrayList<>());
-        }
+        g.printGraph();
 
-        addEdge(adj, 0, 1);
-        addEdge(adj, 0, 2);
-        addEdge(adj, 1, 2);
-        addEdge(adj, 2, 3);
+        MatrixGraph g2 = new MatrixGraph(5);
+        g2.addEdge(0, 1);
+        g2.addEdge(1, 2);
+        g2.addEdge(2, 3);
+        g2.addEdge(1, 4);
 
-        printGraph(adj);
+        g2.printGraph();
 
-    }
-
-    private static void addEdge(List<List<Integer>> graph, int src, int dest) {
-        graph.get(src).add(dest);
-    }
-
-
-    private static void printGraph(List<List<Integer>> adj) {
-        int n = adj.size();
-        for (int i = 0; i < n; i++) {
-            List<Integer> adjNodes = adj.get(i);
-            System.out.print(i + " : ");
-            for (int j = 0; j < adjNodes.size(); j++) {
-                System.out.print(adjNodes.get(j) + ", ");
-            }
-            System.out.println("");
-        }
     }
 }
