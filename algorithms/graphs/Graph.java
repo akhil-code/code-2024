@@ -6,40 +6,43 @@ import java.util.List;
 
 public class Graph {
     int size;
-    List<List<Integer>> nodes;
+    List<List<GraphNode>> nodes;
 
     public Graph(int size) {
         this.size = size;
-        this.nodes = new ArrayList<>();
+        nodes = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
-            this.nodes.add(new LinkedList<>());
+            nodes.add(new LinkedList<>());
         }
     }
 
     public void addEdge(int src, int dest) {
-        this.nodes.get(src).add(dest);
+        this.nodes.get(src).add(new GraphNode(dest));
     }
 
-    public boolean isEdgePresent(int src, int dest) {
-        if(!this.nodes.get(src).isEmpty()) {
-            List<Integer> adjNodes = this.nodes.get(src);
-            for(int adjNode : adjNodes) {
-                if(adjNode == dest) {
-                    return true;
-                }
-            }
-        }
-        return false;
+    public void addWeightedEdge(int src, int dest, int weight) {
+        this.nodes.get(src).add(new GraphNode(dest, weight));
     }
 
     public void printGraph() {
         for (int i = 0; i < size; i++) {
             System.out.print(i + ": ");
-            List<Integer> adjNodes = this.nodes.get(i);
-            for(int adjNode : adjNodes) {
+            List<GraphNode> adjNodes = this.nodes.get(i);
+            for(GraphNode adjNode : adjNodes) {
                 System.out.print(adjNode + ", ");
             }
             System.out.println("");
         }
+    }
+
+    public List<GraphEdge> getAllEdges() {
+        List<GraphEdge> edges = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            List<GraphNode> adjNodes = nodes.get(i);
+            for(GraphNode adjNode : adjNodes) {
+                edges.add(new GraphEdge(i, adjNode.nodeId, adjNode.dist));
+            }
+        }
+        return edges;
     }
 }
