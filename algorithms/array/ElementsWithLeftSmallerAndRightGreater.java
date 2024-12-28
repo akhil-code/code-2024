@@ -1,6 +1,5 @@
 package algorithms.array;
 
-import java.util.Arrays;
 
 public class ElementsWithLeftSmallerAndRightGreater {
     public static void main(String[] args)
