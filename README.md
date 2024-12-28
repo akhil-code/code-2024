@@ -16,3 +16,5 @@
 
 ### AMAZON - ARCHIVES
 * Reach the number by making jumps of two given lengths - https://www.geeksforgeeks.org/reach-the-numbers-by-making-jumps-of-two-given-lengths/
+* Divide an array into two arrays of equal average - https://www.geeksforgeeks.org/divide-array-two-sub-arrays-averages-equal
+* 
