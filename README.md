@@ -8,3 +8,4 @@
 * [todo] Stock buy and sell (only one transaction) - https://www.geeksforgeeks.org/best-time-to-buy-and-sell-stock/
 * Elements with left side smaller and right side greater - https://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
 * Convert array to zig zag fashion - https://www.geeksforgeeks.org/convert-array-into-zig-zag-fashion/
+* Largest number formed from array - https://www.geeksforgeeks.org/given-an-array-of-numbers-arrange-the-numbers-to-form-the-biggest-number/
