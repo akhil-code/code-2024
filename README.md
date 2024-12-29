@@ -20,4 +20,4 @@
 * [todo] synonymous strings - https://alexgolec.dev/synonymous-queries/
 * Largest area in histogram - https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-using-stack/
 * Swap two numbers without using third variable - https://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/#
-* 
+* Stock Span problem - https://www.geeksforgeeks.org/the-stock-span-problem/
