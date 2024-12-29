@@ -11,7 +11,7 @@
 * Largest number formed from array - https://www.geeksforgeeks.org/given-an-array-of-numbers-arrange-the-numbers-to-form-the-biggest-number/
 
 ### STRINGS - MUST DO QUESTIONS
-* [todo] Reverse words in given string - https://www.geeksforgeeks.org/reverse-words-in-a-given-string/
+* [todo-regex] Reverse words in given string - https://www.geeksforgeeks.org/reverse-words-in-a-given-string/
 * Check if two words are anagrams - https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/
 
 ### AMAZON - ARCHIVES
