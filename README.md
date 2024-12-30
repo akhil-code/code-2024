@@ -30,3 +30,4 @@
 * Stack using queue - https://www.geeksforgeeks.org/implement-stack-using-queue/
 * Queue using Stack - https://www.geeksforgeeks.org/queue-using-stacks/#
 * Print Pyramids of 1 - https://www.geeksforgeeks.org/c-program-print-pyramid-pattern/
+* 21 Sticks puzzle - https://www.geeksforgeeks.org/21-matchsticks-problem/
