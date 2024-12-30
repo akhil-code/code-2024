@@ -29,3 +29,4 @@
 * Starting point of circular petrol pump - https://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/#
 * Stack using queue - https://www.geeksforgeeks.org/implement-stack-using-queue/
 * Queue using Stack - https://www.geeksforgeeks.org/queue-using-stacks/#
+* Print Pyramids of 1 - https://www.geeksforgeeks.org/c-program-print-pyramid-pattern/
