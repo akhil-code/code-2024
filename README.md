@@ -31,3 +31,4 @@
 * Queue using Stack - https://www.geeksforgeeks.org/queue-using-stacks/#
 * Print Pyramids of 1 - https://www.geeksforgeeks.org/c-program-print-pyramid-pattern/
 * 21 Sticks puzzle - https://www.geeksforgeeks.org/21-matchsticks-problem/
+* Design a stack with getMin() in O(1) time - https://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/#
