@@ -38,3 +38,5 @@
 * Sliding Window Maximum (Maximum of all subarrays of size K) - https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
 * Search in a Sorted and Rotated Array - https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/#expected-approach-1using-two-binary-searches-olog-n-time-and-o1-space
 * Maximum and Minimum in array with minimum comparisions - https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+* Find number of set bits in a number - https://www.geeksforgeeks.org/count-set-bits-in-an-integer/#
+* [todo] count set bits in a number - https://www.geeksforgeeks.org/count-set-bits-in-an-integer/#
