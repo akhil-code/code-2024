@@ -36,3 +36,5 @@
 * Print balanced parentheses - https://www.geeksforgeeks.org/print-all-combinations-of-balanced-parentheses/
 * Sort a nearly sorted (or K sorted) array - https://www.geeksforgeeks.org/nearly-sorted-algorithm/
 * Sliding Window Maximum (Maximum of all subarrays of size K) - https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
+* Search in a Sorted and Rotated Array - https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/#expected-approach-1using-two-binary-searches-olog-n-time-and-o1-space
+* 
