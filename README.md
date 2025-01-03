@@ -40,3 +40,5 @@
 * Maximum and Minimum in array with minimum comparisions - https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
 * Find number of set bits in a number - https://www.geeksforgeeks.org/count-set-bits-in-an-integer/#
 * [todo] count set bits in a number - https://www.geeksforgeeks.org/count-set-bits-in-an-integer/#
+* Print a given matrix in spiral form - https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
+* 
