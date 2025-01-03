@@ -35,3 +35,4 @@
 * Find next greatest number with same set of digits - https://www.geeksforgeeks.org/find-next-greater-number-set-digits/
 * Print balanced parentheses - https://www.geeksforgeeks.org/print-all-combinations-of-balanced-parentheses/
 * Sort a nearly sorted (or K sorted) array - https://www.geeksforgeeks.org/nearly-sorted-algorithm/
+* Sliding Window Maximum (Maximum of all subarrays of size K) - https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
